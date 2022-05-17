@@ -1,6 +1,6 @@
 package imovel;
 
-public class Imovel {
+public abstract class Imovel {
 
     double metragem;
     int codigo;
