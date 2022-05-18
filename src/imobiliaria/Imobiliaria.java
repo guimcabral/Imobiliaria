@@ -13,17 +13,17 @@ public class Imobiliaria {
     final int indisponivel = -2;
 
     // Guarda as referências dos objetos do tipo Cliente registrados na imobiliária.
-    ArrayList<Cliente> clientes;
+    private ArrayList<Cliente> clientes;
     // Guarda as referências dos objetos do tipo Imovel registrados na imobiliária.
-    ArrayList<Imovel> imoveis;
+    private ArrayList<Imovel> imoveis;
     // Guarda um valor inteiro por Imovel – indicando se ele está (i) locado, (ii) disponível para locação ou (iii)
     // indisponível para locação. No primeiro caso, o inteiro se refere ao índice em clientes associados ao Cliente que
     // fez a locação. No segundo e terceiro casos, o inteiro tem valor -1 e -2, respectivamente. Este atributo possui
     // sempre o mesmo tamanho de imóveis.
-    ArrayList<Integer> locacoes;
+    private ArrayList<Integer> locacoes;
     // Guarda um valor lógico por Imovel - indicando se ele está ou não disponível para venda. Este atributo possui
     // sempre o mesmo tamanho de imóveis.
-    ArrayList<Boolean> vendas;
+    private ArrayList<Boolean> vendas;
 
     public Imobiliaria(){
         // Instancia todos os atributos.
