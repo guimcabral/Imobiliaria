@@ -35,13 +35,17 @@ public class Imobiliaria {
 
     public boolean registraImovel(Funcionario funcionario, Imovel imovel){
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica se há um imóvel no mesmo endereço.
         for (Imovel i: imoveis) {
-            if (Objects.equals(i.getEndereco(), imovel.getEndereco()))
+            if (Objects.equals(i.getEndereco(), imovel.getEndereco())){
+                System.out.println("Há um imóvel no mesmo endereço.");
                 return false;
+            }
         }
 
         // Adiciona o imóvel à lista de imóveis, à lista de locações como indisponível e à lista de vendas como
@@ -54,13 +58,17 @@ public class Imobiliaria {
 
     public boolean registraCliente(Funcionario funcionario, String nome, String cpf){
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica se o cliente está na lista de clientes.
         for (Cliente c: clientes) {
-            if (Objects.equals(c.getCpf(), cpf))
+            if (Objects.equals(c.getCpf(), cpf)){
+                System.out.println("O CPF já está cadastrado.");
                 return false;
+            }
         }
 
         // Adiciona o cliente à lista de clientes.
@@ -72,8 +80,10 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -84,8 +94,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size())
+        if(index > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
         // Muda o estado para disponível para locação.
         locacoes.set(index, disponivel);
@@ -96,8 +108,10 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -108,8 +122,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size())
+        if(index > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
         // Muda o estado para indisponível para locação.
         locacoes.set(index, indisponivel);
@@ -120,8 +136,10 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -132,8 +150,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size())
+        if(index > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
         // Muda o estado para disponível para venda.
         vendas.set(index, true);
@@ -144,8 +164,10 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -156,8 +178,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size())
+        if(index > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
         // Muda o estado para indisponível para venda.
         vendas.set(index, false);
@@ -192,8 +216,10 @@ public class Imobiliaria {
         int index_cliente = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do cliente na lista de clientes.
         for (Cliente c: clientes) {
@@ -206,8 +232,10 @@ public class Imobiliaria {
         }
 
         // Verifica se o cliente está na lista de clientes.
-        if(index_cliente > clientes.size())
+        if(index_cliente > clientes.size()){
+            System.out.println("O cliente não está na lista de clientes.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -218,8 +246,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index_imovel > imoveis.size())
+        if(index_imovel > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
         locacoes.set(index_imovel, index_cliente);
         return true;
@@ -230,8 +260,10 @@ public class Imobiliaria {
         int index_cliente = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do cliente na lista de clientes.
         for (Cliente c: clientes) {
@@ -244,8 +276,10 @@ public class Imobiliaria {
         }
 
         // Verifica se o cliente está na lista de clientes.
-        if(index_cliente > clientes.size())
+        if(index_cliente > clientes.size()){
+            System.out.println("O cliente não está na lista de clientes.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -256,8 +290,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index_imovel > imoveis.size())
+        if(index_imovel > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
         // Verifica se o cliente associado ao cpf recebido loca o imóvel associado ao código recebido.
         if(locacoes.get(index_imovel) == index_cliente){
@@ -273,8 +309,10 @@ public class Imobiliaria {
         int index_cliente = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado())
+        if(funcionario.isAutenticado()){
+            System.out.println("O funcionário não está autenticado.");
             return false;
+        }
 
         // Verifica qual o índice do cliente na lista de clientes.
         for (Cliente c: clientes) {
@@ -287,8 +325,10 @@ public class Imobiliaria {
         }
 
         // Verifica se o cliente está na lista de clientes.
-        if(index_cliente > clientes.size())
+        if(index_cliente > clientes.size()){
+            System.out.println("O cliente não está na lista de clientes.");
             return false;
+        }
 
         // Verifica qual o índice do imóvel na lista de imóveis.
         for (Imovel i: imoveis) {
@@ -299,8 +339,10 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index_imovel > imoveis.size())
+        if(index_imovel > imoveis.size()){
+            System.out.println("O imóvel não está na lista de imóveis.");
             return false;
+        }
 
 
         if(vendas.get(index_imovel) && (locacoes.get(index_imovel) == disponivel || locacoes.get(index_imovel) == index_cliente)){
