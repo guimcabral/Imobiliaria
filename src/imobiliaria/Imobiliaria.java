@@ -35,7 +35,7 @@ public class Imobiliaria {
 
     public boolean registraImovel(Funcionario funcionario, Imovel imovel){
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -58,7 +58,7 @@ public class Imobiliaria {
 
     public boolean registraCliente(Funcionario funcionario, String nome, String cpf){
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -80,7 +80,7 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -108,7 +108,7 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -136,7 +136,7 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -164,7 +164,7 @@ public class Imobiliaria {
         int index = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -216,7 +216,7 @@ public class Imobiliaria {
         int index_cliente = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -260,7 +260,7 @@ public class Imobiliaria {
         int index_cliente = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
@@ -309,7 +309,7 @@ public class Imobiliaria {
         int index_cliente = 0;
 
         // Verifica se o usuário está autenticado.
-        if(funcionario.isAutenticado()){
+        if(!funcionario.isAutenticado()){
             System.out.println("O funcionário não está autenticado.");
             return false;
         }
