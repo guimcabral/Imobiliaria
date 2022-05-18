@@ -92,7 +92,7 @@ public class Imobiliaria {
         return true;
     }
 
-    public boolean removeImovelParaListaLocacoes(Funcionario funcionario, int codigo){
+    public boolean removeImovelDaListaLocacoes(Funcionario funcionario, int codigo){
         int index = 0;
 
         // Verifica se o usuário está autenticado.
