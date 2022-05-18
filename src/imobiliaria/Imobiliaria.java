@@ -94,8 +94,14 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size()){
+        if(index >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
+            return false;
+        }
+
+        // Verifica se há o imóvel na lista de imóveis para locação.
+        if(locacoes.get(index) == disponivel){
+            System.out.println("O imóvel já está na lista de imóveis para locação.");
             return false;
         }
 
@@ -122,8 +128,14 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size()){
+        if(index >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
+            return false;
+        }
+
+        // Verifica se há o imóvel na lista de imóveis para locação.
+        if(locacoes.get(index) != disponivel){
+            System.out.println("O imóvel não está na lista de imóveis para locação.");
             return false;
         }
 
@@ -150,8 +162,14 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size()){
+        if(index >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
+            return false;
+        }
+
+        // Verifica se há o imóvel na lista de imóveis à venda.
+        if(vendas.get(index)){
+            System.out.println("O imóvel já está na lista de imóveis à venda.");
             return false;
         }
 
@@ -178,8 +196,14 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index > imoveis.size()){
+        if(index >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
+            return false;
+        }
+
+        // Verifica se há o imóvel na lista de imóveis à venda.
+        if(!vendas.get(index)){
+            System.out.println("O imóvel não está na lista de imóveis à venda.");
             return false;
         }
 
@@ -189,25 +213,24 @@ public class Imobiliaria {
     }
 
     public void listaImoveis(){
-        System.out.println("Lista de imóveis:\n");
-        for (Imovel i: imoveis) {
-            System.out.println(i.toString() + "\n");
-        }
+        System.out.println("------ TODOS OS IMÓVEIS ------");
+        for (int i=0; i<imoveis.size(); i++)
+            System.out.print("------ IMÓVEL " + (i+1) + " ------\n" + imoveis.get(i).toString() + "\n");
     }
 
     public void listaImoveisDisponiveisLocacao(){
-        System.out.println("Lista de imóveis para locação:\n");
+        System.out.println("------ IMÓVEIS PARA LOCAÇÃO ------");
         for (int i=0; i<imoveis.size(); i++) {
             if(locacoes.get(i) == disponivel)
-                System.out.println(imoveis.get(i).toString() + "\n");
+                System.out.print("------ IMÓVEL " + (i+1) + " ------\n" + imoveis.get(i).toString() + "\n");
         }
     }
 
     public void listaImoveisDisponiveisVenda(){
-        System.out.println("Lista de imóveis para venda:\n");
+        System.out.println("------ IMÓVEIS PARA VENDA ------");
         for (int i=0; i<imoveis.size(); i++) {
             if(vendas.get(i))
-                System.out.println(imoveis.get(i).toString() + "\n");
+                System.out.print("------ IMÓVEL " + (i+1) + " ------\n" + imoveis.get(i).toString() + "\n");
         }
     }
 
@@ -232,7 +255,7 @@ public class Imobiliaria {
         }
 
         // Verifica se o cliente está na lista de clientes.
-        if(index_cliente > clientes.size()){
+        if(index_cliente >= clientes.size()){
             System.out.println("O cliente não está na lista de clientes.");
             return false;
         }
@@ -246,8 +269,14 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index_imovel > imoveis.size()){
+        if(index_imovel >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
+            return false;
+        }
+
+        // Verifica se há o imóvel na lista de imóveis para locação.
+        if(locacoes.get(index_imovel) != disponivel){
+            System.out.println("O imóvel não está na lista de imóveis para locação.");
             return false;
         }
 
@@ -276,7 +305,7 @@ public class Imobiliaria {
         }
 
         // Verifica se o cliente está na lista de clientes.
-        if(index_cliente > clientes.size()){
+        if(index_cliente >= clientes.size()){
             System.out.println("O cliente não está na lista de clientes.");
             return false;
         }
@@ -290,8 +319,14 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index_imovel > imoveis.size()){
+        if(index_imovel >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
+            return false;
+        }
+
+        // Verifica se há o imóvel na lista de imóveis para locação.
+        if(locacoes.get(index_imovel) == disponivel || locacoes.get(index_imovel) == indisponivel){
+            System.out.println("O imóvel não está locado.");
             return false;
         }
 
@@ -325,7 +360,7 @@ public class Imobiliaria {
         }
 
         // Verifica se o cliente está na lista de clientes.
-        if(index_cliente > clientes.size()){
+        if(index_cliente >= clientes.size()){
             System.out.println("O cliente não está na lista de clientes.");
             return false;
         }
@@ -339,7 +374,7 @@ public class Imobiliaria {
         }
 
         // Verifica se há o imóvel na lista de imóveis.
-        if(index_imovel > imoveis.size()){
+        if(index_imovel >= imoveis.size()){
             System.out.println("O imóvel não está na lista de imóveis.");
             return false;
         }

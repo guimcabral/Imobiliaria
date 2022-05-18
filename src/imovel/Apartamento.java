@@ -20,7 +20,8 @@ public class Apartamento extends Imovel{
         else
             box = "Não";
 
-        return "Endereço: " + endereco + "\n" +
+        return "Código: " + codigo + "\n" +
+                "Endereço: " + endereco + "\n" +
                 "Metragem: " + metragem + "\n" +
                 "Número de quartos: " + nQuartos + "\n" +
                 "Número de banheiros: " + nBanheiros + "\n" +
