@@ -13,6 +13,25 @@ public class Casa extends Imovel{
 
 
     public String toString(){
-        return "";
+
+        String patio;
+        String garagem;
+
+        if(temPatio)
+            patio = "Sim";
+        else
+            patio = "Não";
+
+        if(temGaragem)
+            garagem = "Sim";
+        else
+            garagem = "Não";
+
+        return "Endereço: " + endereco + "\n" +
+                "Metragem: " + metragem + "\n" +
+                "Número de quartos: " + nQuartos + "\n" +
+                "Número de banheiros: " + nBanheiros + "\n" +
+                "Pátio: " + patio + "\n" +
+                "Garagem: " + garagem;
     }
 }

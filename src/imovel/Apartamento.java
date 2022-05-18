@@ -12,6 +12,19 @@ public class Apartamento extends Imovel{
     }
 
     public String toString(){
-        return "";
+
+        String box;
+
+        if(temBox)
+            box = "Sim";
+        else
+            box = "Não";
+
+        return "Endereço: " + endereco + "\n" +
+                "Metragem: " + metragem + "\n" +
+                "Número de quartos: " + nQuartos + "\n" +
+                "Número de banheiros: " + nBanheiros + "\n" +
+                "Andar: " + andar + "\n" +
+                "Box: " + box;
     }
 }
